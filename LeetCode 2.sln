@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1155. Number of Dice Rolls 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1578. Minimum Time to Make Rope Colorful", "1578. Minimum Time to Make Rope Colorful\1578. Minimum Time to Make Rope Colorful.csproj", "{ADDE8017-8DBC-4B7E-AF9B-C47887B686E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1531. String Compression II", "1531. String Compression II\1531. String Compression II.csproj", "{9D873851-F382-4B7D-A6D9-4CA9AEB14C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1897. Redistribute Characters to Make All Strings Equal", "1897. Redistribute Characters to Make All Strings Equal\1897. Redistribute Characters to Make All Strings Equal.csproj", "{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{ADDE8017-8DBC-4B7E-AF9B-C47887B686E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADDE8017-8DBC-4B7E-AF9B-C47887B686E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADDE8017-8DBC-4B7E-AF9B-C47887B686E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D873851-F382-4B7D-A6D9-4CA9AEB14C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D873851-F382-4B7D-A6D9-4CA9AEB14C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D873851-F382-4B7D-A6D9-4CA9AEB14C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D873851-F382-4B7D-A6D9-4CA9AEB14C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
