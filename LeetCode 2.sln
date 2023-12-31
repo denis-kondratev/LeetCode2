@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1531. String Compression II
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1897. Redistribute Characters to Make All Strings Equal", "1897. Redistribute Characters to Make All Strings Equal\1897. Redistribute Characters to Make All Strings Equal.csproj", "{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1624. Largest Substring Between Two Equal Characters", "1624. Largest Substring Between Two Equal Characters\1624. Largest Substring Between Two Equal Characters.csproj", "{55FD078B-1063-40AE-BD8F-2A5534A2FF80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13C1DAAE-4929-4E71-A10C-2EAC87D1B575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FD078B-1063-40AE-BD8F-2A5534A2FF80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FD078B-1063-40AE-BD8F-2A5534A2FF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FD078B-1063-40AE-BD8F-2A5534A2FF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FD078B-1063-40AE-BD8F-2A5534A2FF80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
