@@ -34,8 +34,8 @@
  * Constraints:
  *
  * n == colors.length == neededTime.length
- * 1 <= n <= 105
- * 1 <= neededTime[i] <= 104
+ * 1 <= n <= 10^5
+ * 1 <= neededTime[i] <= 10^4
  * colors contains only lowercase English letters.
  */
 

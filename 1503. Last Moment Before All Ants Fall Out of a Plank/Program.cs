@@ -37,7 +37,7 @@
  *
  * Constraints:
  *
- * 1 <= n <= 104
+ * 1 <= n <= 10^4
  * 0 <= left.length <= n + 1
  * 0 <= left[i] <= n
  * 0 <= right.length <= n + 1
