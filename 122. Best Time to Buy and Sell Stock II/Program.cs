@@ -35,12 +35,24 @@
  * 0 <= prices[i] <= 10^4
  */
 
-Console.WriteLine("Hello, World!");
+var solution = new Solution();
+int[] prices = [7, 1, 5, 3, 6, 4];
+Console.WriteLine(solution.MaxProfit(prices));
 
 public class Solution
 {
     public int MaxProfit(int[] prices)
     {
-        return 0;
+        var maxProfit = 0;
+        
+        for (int l = 0, r = 1; r < prices.Length; l++, r++)
+        {
+            if (prices[r] > prices[l])
+            {
+                maxProfit += prices[r] - prices[l];
+            }
+        }
+
+        return maxProfit;
     }
 }
