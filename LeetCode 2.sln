@@ -18,7 +18,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1624. Largest Substring Bet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "455. Assign Cookies", "455. Assign Cookies\455. Assign Cookies.csproj", "{4AE140CB-82AF-4155-8495-0C5410BCB0C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1122. Best Time to Buy and Sell Stock II", "1122. Best Time to Buy and Sell Stock II\1122. Best Time to Buy and Sell Stock II.csproj", "{E666B8F0-03CB-453B-ACE5-A6FB381AD2AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "122. Best Time to Buy and Sell Stock II", "122. Best Time to Buy and Sell Stock II\122. Best Time to Buy and Sell Stock II.csproj", "{C045FCEF-274A-4E6D-9DAA-8DCE76A16D77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,9 +62,9 @@ Global
 		{4AE140CB-82AF-4155-8495-0C5410BCB0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AE140CB-82AF-4155-8495-0C5410BCB0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AE140CB-82AF-4155-8495-0C5410BCB0C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E666B8F0-03CB-453B-ACE5-A6FB381AD2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E666B8F0-03CB-453B-ACE5-A6FB381AD2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E666B8F0-03CB-453B-ACE5-A6FB381AD2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E666B8F0-03CB-453B-ACE5-A6FB381AD2AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C045FCEF-274A-4E6D-9DAA-8DCE76A16D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C045FCEF-274A-4E6D-9DAA-8DCE76A16D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C045FCEF-274A-4E6D-9DAA-8DCE76A16D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C045FCEF-274A-4E6D-9DAA-8DCE76A16D77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
