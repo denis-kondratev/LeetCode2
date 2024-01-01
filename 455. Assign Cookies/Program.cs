@@ -31,12 +31,29 @@
  * 1 <= g[i], s[j] <= 231 - 1
  */
 
-Console.WriteLine("Hello, World!");
+int[] g = [1, 2];
+int[] s = [1, 2, 3];
+
+var solution = new Solution();
+Console.WriteLine(solution.FindContentChildren(g, s));
 
 public class Solution 
 {
     public int FindContentChildren(int[] g, int[] s)
     {
-        return 0;
+        Array.Sort(g);
+        Array.Sort(s);
+        int m = g.Length, n = s.Length;
+        int i = 0, j = 0;
+
+        while (i < m && j < n)
+        {
+            if (g[i] <= s[j++])
+            {
+                i++;
+            }
+        }
+        
+        return i;
     }
 }
