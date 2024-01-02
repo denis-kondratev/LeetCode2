@@ -40,6 +40,21 @@ public class Solution
 {
     public IList<IList<int>> FindMatrix(int[] nums)
     {
-        return null!;
+        var counts = new int[nums.Length];
+        var rows = new List<IList<int>>();
+
+        foreach (var num in nums)
+        {
+            var count = counts[num - 1]++;
+
+            if (rows.Count <= count)
+            {
+                rows.Add(new List<int>());
+            }
+            
+            rows[count].Add(num);
+        }
+
+        return rows;
     }
 }
