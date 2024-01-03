@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2610. Convert an Array Into
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2125. Number of Laser Beams in a Bank", "2125. Number of Laser Beams in a Bank\2125. Number of Laser Beams in a Bank.csproj", "{81CFF998-9ACE-42DE-AE4B-C0E455E52C1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2870. Minimum Number of Operations to Make Array Empty", "2870. Minimum Number of Operations to Make Array Empty\2870. Minimum Number of Operations to Make Array Empty.csproj", "{256E093F-A5FB-4805-A133-E7546D354D45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +80,9 @@ Global
 		{81CFF998-9ACE-42DE-AE4B-C0E455E52C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81CFF998-9ACE-42DE-AE4B-C0E455E52C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81CFF998-9ACE-42DE-AE4B-C0E455E52C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{256E093F-A5FB-4805-A133-E7546D354D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256E093F-A5FB-4805-A133-E7546D354D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256E093F-A5FB-4805-A133-E7546D354D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256E093F-A5FB-4805-A133-E7546D354D45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
