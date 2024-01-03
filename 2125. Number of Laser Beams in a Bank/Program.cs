@@ -50,6 +50,18 @@ public class Solution
 {
     public int NumberOfBeams(string[] bank)
     {
-        return 0;
+        int beamCount = 0, previousDeviceCount = 0;
+        
+        foreach (var row in bank)
+        {
+            var deviceCount = row.Count(x => x == '1');
+            
+            if (deviceCount == 0) continue;
+
+            beamCount += deviceCount * previousDeviceCount;
+            previousDeviceCount = deviceCount;
+        }
+        
+        return beamCount;
     }
 }
