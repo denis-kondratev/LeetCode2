@@ -40,6 +40,25 @@ public class Solution
 {
     public int MinOperations(int[] nums)
     {
-        return 0;
+        Array.Sort(nums);
+        int numCounter = 1, result = 0;
+        
+        for (var i = 1; i < nums.Length; i++)
+        {
+            if (nums[i] == nums[i - 1])
+            {
+                numCounter++;
+                continue;
+            }
+
+            if (numCounter == 1) return -1;
+            result += (numCounter - 1) / 3 + 1;
+            numCounter = 1;
+        }
+        
+        if (numCounter == 1) return -1;
+        result += (numCounter - 1) / 3 + 1;
+        
+        return result;
     }
 }
