@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2125. Number of Laser Beams
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2870. Minimum Number of Operations to Make Array Empty", "2870. Minimum Number of Operations to Make Array Empty\2870. Minimum Number of Operations to Make Array Empty.csproj", "{256E093F-A5FB-4805-A133-E7546D354D45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "300. Longest Increasing Subsequence", "300. Longest Increasing Subsequence\300. Longest Increasing Subsequence.csproj", "{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{256E093F-A5FB-4805-A133-E7546D354D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{256E093F-A5FB-4805-A133-E7546D354D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{256E093F-A5FB-4805-A133-E7546D354D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
