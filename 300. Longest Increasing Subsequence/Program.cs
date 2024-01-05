@@ -24,33 +24,44 @@
  * Follow up: Can you come up with an algorithm that runs in O(n log(n)) time complexity?
  */
 
-int[] nums = [1, 3, 6, 7, 9, 4, 10, 5, 6];
+int[] nums = [5, 6, 7, 2, 3];
 var solution = new Solution();
 Console.WriteLine(solution.LengthOfLIS(nums));
 
-public class Solution 
+public class Solution
 {
+    private int[] _sequence = null!;
+    
     public int LengthOfLIS(int[] nums)
     {
-        var n = nums.Length;
-        var chains = new int[n];
-        chains[0] = 1;
+        _sequence = new int[nums.Length];
+        _sequence[0] = nums[0];
+        var sequenceLength = 1;
         
-        for (var i = 1; i < n; i++)
+        for (var i = 1; i < nums.Length; i++)
         {
-            var maxLength = 0;
-
-            for (var j = 0; j < i; j++)
-            {
-                if (nums[j] < nums[i] && maxLength < chains[j])
-                {
-                    maxLength = chains[j];
-                }
-            }
-
-            chains[i] = maxLength + 1;
+            var index = FindIndexInChain(nums[i], sequenceLength);
+            _sequence[index] = nums[i];
+            sequenceLength = sequenceLength == index ? sequenceLength + 1 : sequenceLength;
         }
-        
-        return chains.Max();
+
+        return sequenceLength;
+    }
+
+    int FindIndexInChain(int num, int right)
+    {
+        var left = 0;
+
+        while (left < right)
+        { 
+            var current = (left + right) / 2;
+
+            if (_sequence[current] < num)
+                left = current + 1;
+            else
+                right = current;
+        }
+
+        return left;
     }
 }
