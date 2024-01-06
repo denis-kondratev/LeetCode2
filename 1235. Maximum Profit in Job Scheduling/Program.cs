@@ -30,12 +30,60 @@
  *  1 <= profit[i] <= 10^4
  */
 
-Console.WriteLine("Hello, World!");
+int[] startTime = [1, 2, 3, 4, 6];
+int[] endTime = [3, 5, 10, 6, 9];
+int[] profit = [20, 20, 100, 70, 60];
+var solution = new Solution();
+Console.WriteLine(solution.JobScheduling(startTime, endTime, profit));
 
 public class Solution 
 {
     public int JobScheduling(int[] startTime, int[] endTime, int[] profit)
     {
-        return 0;
+        var n = startTime.Length;
+        var indices = Enumerable.Range(0, n).OrderBy(i => endTime[i]).ThenBy(i => startTime[i]).ToArray();
+        var dp = new List<(int endTime, int profit)>();
+        dp.Add((endTime[0], 0));
+        
+        for (var k = 0; k < n; k++)
+        {
+            var i = indices[k];
+            
+            if (endTime[i] != dp[^1].endTime)
+            {
+                dp.Add((endTime[i], dp[^1].profit));
+            }
+            
+            var curProfit = FindPreviousProfit(dp, startTime[i]) + profit[i];
+
+            if (curProfit > dp[^1].profit)
+            {
+                dp[^1] = (endTime[i], curProfit);
+            }
+            
+        }
+        
+        return dp[^1].profit;
+    }
+
+    private int FindPreviousProfit(List<(int endTime, int profit)> dp, int endTime)
+    {
+        int left = 0, right = dp.Count - 2;
+
+        while (left < right)
+        {
+            var middle = (left + right - 1) / 2 + 1;
+
+            if (dp[middle].endTime <= endTime)
+            {
+                left = middle;
+            }
+            else
+            {
+                right = middle - 1;
+            }
+        }
+
+        return left < dp.Count - 1 && dp[left].endTime <= endTime ? dp[left].profit : 0;
     }
 }
