@@ -41,29 +41,25 @@ public class Solution
     public int JobScheduling(int[] startTime, int[] endTime, int[] profit)
     {
         var n = startTime.Length;
-        var indices = Enumerable.Range(0, n).OrderBy(i => endTime[i]).ThenBy(i => startTime[i]).ToArray();
-        var dp = new List<(int endTime, int profit)>();
-        dp.Add((endTime[0], 0));
-        
-        for (var k = 0; k < n; k++)
-        {
-            var i = indices[k];
-            
-            if (endTime[i] != dp[^1].endTime)
-            {
-                dp.Add((endTime[i], dp[^1].profit));
-            }
-            
-            var curProfit = FindPreviousProfit(dp, startTime[i]) + profit[i];
+        var orderedIndices = Enumerable.Range(0, n).OrderBy(i => endTime[i]).ToArray();
+        var timeline = new List<(int endTime, int profit)>(n + 1) { (0, 0) };
 
-            if (curProfit > dp[^1].profit)
+        foreach (var i in orderedIndices)
+        {
+            if (endTime[i] != timeline[^1].endTime)
             {
-                dp[^1] = (endTime[i], curProfit);
+                timeline.Add((endTime[i], timeline[^1].profit));
             }
             
+            var curProfit = FindPreviousProfit(timeline, startTime[i]) + profit[i];
+
+            if (curProfit > timeline[^1].profit)
+            {
+                timeline[^1] = (endTime[i], curProfit);
+            }
         }
         
-        return dp[^1].profit;
+        return timeline[^1].profit;
     }
 
     private int FindPreviousProfit(List<(int endTime, int profit)> dp, int endTime)
@@ -84,6 +80,6 @@ public class Solution
             }
         }
 
-        return left < dp.Count - 1 && dp[left].endTime <= endTime ? dp[left].profit : 0;
+        return dp[left].profit;
     }
 }
