@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2870. Minimum Number of Ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "300. Longest Increasing Subsequence", "300. Longest Increasing Subsequence\300. Longest Increasing Subsequence.csproj", "{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1235. Maximum Profit in Job Scheduling", "1235. Maximum Profit in Job Scheduling\1235. Maximum Profit in Job Scheduling.csproj", "{72EAB101-C325-4191-8893-A3491EF824FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,5 +92,9 @@ Global
 		{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F9D0967-3D4D-43BD-AAEA-F5DAACB06B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72EAB101-C325-4191-8893-A3491EF824FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72EAB101-C325-4191-8893-A3491EF824FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72EAB101-C325-4191-8893-A3491EF824FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72EAB101-C325-4191-8893-A3491EF824FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
