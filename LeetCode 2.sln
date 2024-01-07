@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "300. Longest Increasing Sub
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1235. Maximum Profit in Job Scheduling", "1235. Maximum Profit in Job Scheduling\1235. Maximum Profit in Job Scheduling.csproj", "{72EAB101-C325-4191-8893-A3491EF824FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "446. Arithmetic Slices II - Subsequence", "446. Arithmetic Slices II - Subsequence\446. Arithmetic Slices II - Subsequence.csproj", "{979D86EF-97F7-433A-A467-A120369113E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,5 +98,9 @@ Global
 		{72EAB101-C325-4191-8893-A3491EF824FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72EAB101-C325-4191-8893-A3491EF824FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72EAB101-C325-4191-8893-A3491EF824FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{979D86EF-97F7-433A-A467-A120369113E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{979D86EF-97F7-433A-A467-A120369113E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{979D86EF-97F7-433A-A467-A120369113E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{979D86EF-97F7-433A-A467-A120369113E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
