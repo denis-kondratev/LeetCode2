@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1235. Maximum Profit in Job
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "446. Arithmetic Slices II - Subsequence", "446. Arithmetic Slices II - Subsequence\446. Arithmetic Slices II - Subsequence.csproj", "{979D86EF-97F7-433A-A467-A120369113E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "70. Climbing Stairs", "70. Climbing Stairs\70. Climbing Stairs.csproj", "{314CCC55-F699-4371-B4A9-D733FB4F2CF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,5 +104,9 @@ Global
 		{979D86EF-97F7-433A-A467-A120369113E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{979D86EF-97F7-433A-A467-A120369113E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{979D86EF-97F7-433A-A467-A120369113E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314CCC55-F699-4371-B4A9-D733FB4F2CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314CCC55-F699-4371-B4A9-D733FB4F2CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314CCC55-F699-4371-B4A9-D733FB4F2CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314CCC55-F699-4371-B4A9-D733FB4F2CF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
