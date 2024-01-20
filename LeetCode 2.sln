@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "70. Climbing Stairs", "70. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "931. Minimum Falling Path Sum", "931. Minimum Falling Path Sum\931. Minimum Falling Path Sum.csproj", "{851DC147-F45B-4084-83D6-75C24ED76B28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "907. Sum of Subarray Minimums", "907. Sum of Subarray Minimums\907. Sum of Subarray Minimums.csproj", "{22A5B416-BCFE-40E7-8039-8ACBF8003C42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,5 +116,9 @@ Global
 		{851DC147-F45B-4084-83D6-75C24ED76B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{851DC147-F45B-4084-83D6-75C24ED76B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{851DC147-F45B-4084-83D6-75C24ED76B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A5B416-BCFE-40E7-8039-8ACBF8003C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A5B416-BCFE-40E7-8039-8ACBF8003C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A5B416-BCFE-40E7-8039-8ACBF8003C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A5B416-BCFE-40E7-8039-8ACBF8003C42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
