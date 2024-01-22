@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "907. Sum of Subarray Minimu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "198. House Robber", "198. House Robber\198. House Robber.csproj", "{1CA6B984-2796-4B46-8DBA-060E62AD95B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "645. Set Mismatch", "645. Set Mismatch\645. Set Mismatch.csproj", "{005C3CC7-59C2-478F-BE98-E09A0ADBD5A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,5 +128,9 @@ Global
 		{1CA6B984-2796-4B46-8DBA-060E62AD95B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CA6B984-2796-4B46-8DBA-060E62AD95B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CA6B984-2796-4B46-8DBA-060E62AD95B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{005C3CC7-59C2-478F-BE98-E09A0ADBD5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{005C3CC7-59C2-478F-BE98-E09A0ADBD5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{005C3CC7-59C2-478F-BE98-E09A0ADBD5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{005C3CC7-59C2-478F-BE98-E09A0ADBD5A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
