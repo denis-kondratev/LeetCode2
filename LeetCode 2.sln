@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1239. Maximum Length of a C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1457. Pseudo-Palindromic Paths in a Binary Tree", "1457. Pseudo-Palindromic Paths in a Binary Tree\1457. Pseudo-Palindromic Paths in a Binary Tree.csproj", "{73536D97-C8B1-41EE-81AF-69B167728C07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1143. Longest Common Subsequence", "1143. Longest Common Subsequence\1143. Longest Common Subsequence.csproj", "{4106E087-7DE6-4D25-8017-10759BB4FE71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,5 +146,9 @@ Global
 		{73536D97-C8B1-41EE-81AF-69B167728C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73536D97-C8B1-41EE-81AF-69B167728C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73536D97-C8B1-41EE-81AF-69B167728C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4106E087-7DE6-4D25-8017-10759BB4FE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4106E087-7DE6-4D25-8017-10759BB4FE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4106E087-7DE6-4D25-8017-10759BB4FE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4106E087-7DE6-4D25-8017-10759BB4FE71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
