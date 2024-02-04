@@ -50,6 +50,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1143. Longest Common Subseq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "232. Implement Queue using Stacks", "232. Implement Queue using Stacks\232. Implement Queue using Stacks.csproj", "{EEFAD529-A103-4755-B223-965AF8FBBD95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "76. Minimum Window Substring", "76. Minimum Window Substring\76. Minimum Window Substring.csproj", "{08B7F18E-823C-4CDA-8BAB-82A4D400AD47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -156,5 +158,9 @@ Global
 		{EEFAD529-A103-4755-B223-965AF8FBBD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEFAD529-A103-4755-B223-965AF8FBBD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEFAD529-A103-4755-B223-965AF8FBBD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B7F18E-823C-4CDA-8BAB-82A4D400AD47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B7F18E-823C-4CDA-8BAB-82A4D400AD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B7F18E-823C-4CDA-8BAB-82A4D400AD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B7F18E-823C-4CDA-8BAB-82A4D400AD47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
