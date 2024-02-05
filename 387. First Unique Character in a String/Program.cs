@@ -27,24 +27,22 @@ public class Solution
 {
     public int FirstUniqChar(string s)
     {
-        Span<(int count,int index)> set = stackalloc (int count,int index)[26];
+        var n = s.Length;
+        Span<int> set = stackalloc int['z' + 1];
 
-        for (var i = s.Length - 1; i >= 0; i--)
+        foreach (var c in s)
         {
-            var j = s[i] - 'a';
-            set[j] = (set[j].count + 1, i);
+            set[c]++;
         }
 
-        var result = int.MaxValue;
-        
-        foreach (var (count, index) in set)
+        for (var i = 0; i < n; i++)
         {
-            if (count == 1 && index < result)
+            if (set[s[i]] == 1)
             {
-                result = index;
+                return i;
             }
         }
 
-        return result == int.MaxValue ? -1 : result;
+        return -1;
     }
 }
