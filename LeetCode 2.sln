@@ -54,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "76. Minimum Window Substrin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "387. First Unique Character in a String", "387. First Unique Character in a String\387. First Unique Character in a String.csproj", "{F4E3C8D4-160D-4AB2-8421-F15FD016893C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "49. Group Anagrams", "49. Group Anagrams\49. Group Anagrams.csproj", "{D54F895F-7C3D-459D-959B-FC8E43FCB2DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -168,5 +170,9 @@ Global
 		{F4E3C8D4-160D-4AB2-8421-F15FD016893C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4E3C8D4-160D-4AB2-8421-F15FD016893C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4E3C8D4-160D-4AB2-8421-F15FD016893C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D54F895F-7C3D-459D-959B-FC8E43FCB2DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54F895F-7C3D-459D-959B-FC8E43FCB2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54F895F-7C3D-459D-959B-FC8E43FCB2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54F895F-7C3D-459D-959B-FC8E43FCB2DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
