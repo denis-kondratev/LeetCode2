@@ -31,10 +31,14 @@ public class Solution
     public IList<IList<string>> GroupAnagrams(string[] strs)
     {
         var anagrams = new Dictionary<string, IList<string>>();
+        var buffer = new char[100];
 
         foreach (var str in strs)
         {
-            var key = string.Concat(str.OrderBy(c => c));
+            var length = str.Length;
+            str.CopyTo(0, buffer, 0, length);
+            Array.Sort(buffer, 0, length);
+            var key = new string(buffer, 0, length);
 
             if (anagrams.TryGetValue(key, out var list))
             {
@@ -45,7 +49,7 @@ public class Solution
                 anagrams[key] = new List<string> { str };
             }
         }
-
-        return anagrams.Select(p => p.Value).ToArray();
+        
+        return anagrams.Select(x => x.Value).ToArray();
     }
 }
