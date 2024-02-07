@@ -35,6 +35,28 @@ public class Solution
 {
     public string FrequencySort(string s)
     {
-        return "";
+        var map = new int['z' + 1];
+
+        foreach (var c in s)
+        {
+            map[c]++;
+        }
+
+        var orderedSequence = map.Select((c, i) => (count: c, @char: (char)i))
+            .Where(x => x.count > 0)
+            .OrderByDescending(x => x.count);
+        
+        return string.Create(s.Length, orderedSequence, (span, sequence) =>
+        {
+            var i = 0;
+            
+            foreach (var (count, @char) in sequence)
+            {
+                for (var j = 0; j < count; j++)
+                {
+                    span[i++] = @char;
+                }
+            }
+        });
     }
 }
