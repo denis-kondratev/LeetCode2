@@ -20,13 +20,27 @@
  *   1 <= n <= 10^4
  */
 
-
-Console.WriteLine("Hello, World!");
+var solution = new Solution();
+Console.WriteLine(solution.NumSquares(13));
 
 public class Solution
 {
     public int NumSquares(int n)
     {
-        return 0;
+        var lengths = new int[n + 1];
+
+        for (int i = 1; i <= n; i++)
+        {
+            var minLength = lengths[i - 1] + 1;
+
+            for (int j = 2, sqr = j * j; sqr <= i; ++j, sqr = j * j)
+            {
+                minLength = Math.Min(minLength, lengths[i - sqr] + 1);
+            }
+
+            lengths[i] = minLength;
+        }
+        
+        return lengths[^1];
     }
 }
