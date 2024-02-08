@@ -23,24 +23,59 @@
 var solution = new Solution();
 Console.WriteLine(solution.NumSquares(13));
 
+// Mathematics
 public class Solution
 {
-    public int NumSquares(int n)
+    public int NumSquares(int n) 
     {
-        var lengths = new int[n + 1];
-
-        for (int i = 1; i <= n; i++)
+        if (Math.Sqrt(n) % 1 == 0)
         {
-            var minLength = lengths[i - 1] + 1;
-
-            for (int j = 2, sqr = j * j; sqr <= i; ++j, sqr = j * j)
-            {
-                minLength = Math.Min(minLength, lengths[i - sqr] + 1);
-            }
-
-            lengths[i] = minLength;
+            return 1;
         }
         
-        return lengths[^1];
+        while ((n & 3) == 0)
+        {
+            n >>= 2;
+        }
+        
+        if ((n & 7) == 7)
+        {
+            return 4;
+        }
+        
+        var sqrtN = (int)Math.Sqrt(n);
+        
+        for (var i = 1; i <= sqrtN; i++)
+        {
+            if (Math.Sqrt(n - i * i) % 1 == 0)
+            {
+                return 2;
+            }
+        }
+
+        return 3;
     }
 }
+
+// Dynamic Programing
+// public class Solution
+// {
+//     public int NumSquares(int n)
+//     {
+//         var lengths = new int[n + 1];
+//
+//         for (int i = 1; i <= n; i++)
+//         {
+//             var minLength = lengths[i - 1] + 1;
+//
+//             for (int j = 2, sqr = j * j; sqr <= i; ++j, sqr = j * j)
+//             {
+//                 minLength = Math.Min(minLength, lengths[i - sqr] + 1);
+//             }
+//
+//             lengths[i] = minLength;
+//         }
+//         
+//         return lengths[^1];
+//     }
+// }
