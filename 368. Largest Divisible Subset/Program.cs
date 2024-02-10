@@ -23,12 +23,50 @@
  *   All the integers in nums are unique.
  */
 
-Console.WriteLine("Hello, World!");
+int[] nums = [1, 2, 3];
+var solution = new Solution();
+Console.WriteLine(solution.LargestDivisibleSubset(nums));
 
 public class Solution
 {
     public IList<int> LargestDivisibleSubset(int[] nums)
     {
-        return Array.Empty<int>();
+        Array.Sort(nums);
+        var sets = new (int length, int previous)[nums.Length];
+        var maxLength = -1;
+        var index = -1;
+
+        for (var i = 0; i < nums.Length; i++)
+        {
+            var length = 0;
+            var previous = -1;
+
+            for (var j = 0; j < i; j++)
+            {
+                if (sets[j].length > length && nums[i] % nums[j] == 0)
+                {
+                    length = sets[j].length;
+                    previous = j;
+                }
+            }
+
+            if (length >= maxLength)
+            {
+                maxLength = length;
+                index = i;
+            }
+            
+            sets[i] = (length + 1, previous);
+        }
+
+        var result = new List<int>(maxLength);
+        
+        while (index > 0)
+        {
+            result.Add(nums[index]);
+            index = sets[index].previous;
+        }
+
+        return result;
     }
 }
