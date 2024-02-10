@@ -27,31 +27,26 @@ public class Solution
 {
     public int CountSubstrings(string s)
     {
-        var n = s.Length;
-        var dp = new bool[n,n];
-        dp[0, 0] = true;
-        var count = n;
+        int n = s.Length, count = n;
 
-        for (var i = 1; i < n; i++)
+        for (int i = 0; i < n; i++)
         {
-            dp[i, i] = true;
-            
-            if (s[i] == s[i - 1])
+            int l = i, r = i + 1;
+
+            while (l >= 0 && r < n && s[l--] == s[r++])
             {
-                dp[i, i - 1] = true;
                 count++;
             }
+
+            l = i - 1;
+            r = i + 1;
             
-            for (int j = i - 2; j >= 0; j--)
+            while (l >= 0 && r < n && s[l--] == s[r++])
             {
-                if (s[i] == s[j] && dp[i - 1, j + 1])
-                {
-                    dp[i, j] = true;
-                    count++;
-                }
+                count++;
             }
         }
-        
+
         return count;
     }
 }
