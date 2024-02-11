@@ -40,12 +40,49 @@
  *   0 <= grid[i][j] <= 100
  */
 
-Console.WriteLine("Hello, World!");
+int[][] grid = [[1, 2, 3], [1, 2, 3]];
+var solution = new Solution();
+Console.WriteLine(solution.CherryPickup(grid));
 
 public class Solution
 {
     public int CherryPickup(int[][] grid)
     {
-        return 0;
+        int m = grid.Length, n = grid[0].Length;
+        int[,] previous = new int[n, n], current = new int[n, n];
+
+        for (var i = m - 1; i >= 0; i--)
+        {
+            (previous, current) = (current, previous);
+            
+            for (var j = Math.Min(i, n - 1); j >= 0; j--)
+            {
+                for (var k = Math.Max(n - i - 1, j); k < n; k++)
+                {
+                    var sum = GetMaxPrevious(j, k);
+                    sum += j == k ? grid[i][j] : grid[i][j] + grid[i][k];
+                    current[j, k] = sum;
+                }
+            }
+        }
+        
+        return current[0, n - 1];
+        
+        int GetMaxPrevious(int x, int y)
+        {
+            var max = 0;
+            int minX = Math.Max(0, x - 1), maxX = Math.Min(n, x + 2);
+            int minY = Math.Max(0, y - 1), maxY = Math.Min(n, y + 2);
+
+            for (int i = minX; i < maxX; i++)
+            {
+                for (int j = minY; j < maxY; j++)
+                {
+                    max = Math.Max(previous[i, j], max);
+                }
+            }
+            
+            return max;
+        }
     }
 }
