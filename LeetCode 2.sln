@@ -66,6 +66,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "647. Palindromic Substrings
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1463. Cherry Pickup II", "1463. Cherry Pickup II\1463. Cherry Pickup II.csproj", "{7E509A1B-A45C-4412-AC4D-A85641D7A130}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "169. Majority Element", "169. Majority Element\169. Majority Element.csproj", "{23BBA91A-C346-40EF-98D3-D9E8D8A44AD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -204,5 +206,9 @@ Global
 		{7E509A1B-A45C-4412-AC4D-A85641D7A130}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E509A1B-A45C-4412-AC4D-A85641D7A130}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E509A1B-A45C-4412-AC4D-A85641D7A130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BBA91A-C346-40EF-98D3-D9E8D8A44AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BBA91A-C346-40EF-98D3-D9E8D8A44AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BBA91A-C346-40EF-98D3-D9E8D8A44AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BBA91A-C346-40EF-98D3-D9E8D8A44AD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
