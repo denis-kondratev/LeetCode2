@@ -70,6 +70,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "169. Majority Element", "16
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2108. Find First Palindromic String in the Array", "2108. Find First Palindromic String in the Array\2108. Find First Palindromic String in the Array.csproj", "{7351A3C8-06F6-4049-9A47-482EC9C3D322}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2149. Rearrange Array Elements by Sign", "2149. Rearrange Array Elements by Sign\2149. Rearrange Array Elements by Sign.csproj", "{CA58D6E9-E66E-4A28-91F1-7787655B1493}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -216,5 +218,9 @@ Global
 		{7351A3C8-06F6-4049-9A47-482EC9C3D322}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7351A3C8-06F6-4049-9A47-482EC9C3D322}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7351A3C8-06F6-4049-9A47-482EC9C3D322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA58D6E9-E66E-4A28-91F1-7787655B1493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA58D6E9-E66E-4A28-91F1-7787655B1493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA58D6E9-E66E-4A28-91F1-7787655B1493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA58D6E9-E66E-4A28-91F1-7787655B1493}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
