@@ -43,18 +43,21 @@ public class Solution
 {
     public int[] RearrangeArray(int[] nums)
     {
-        int negative = -1, positive = -1, i = 0, n = nums.Length;
-        var result = new int[n];
+        int negative = 1, positive = 0;
+        var result = new int[nums.Length];
         
-        while(i < n)
+        foreach (var num in nums)
         {
-            while (nums[++positive] < 0) { }
-
-            result[i++] = nums[positive];
-            
-            while (nums[++negative] > 0) { }
-
-            result[i++] = nums[negative];
+            if (num > 0)
+            {
+                result[positive] = num;
+                positive += 2;
+            }
+            else
+            {
+                result[negative] = num;
+                negative += 2;
+            }
         }
 
         return result;
