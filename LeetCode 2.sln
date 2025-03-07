@@ -72,6 +72,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2108. Find First Palindromi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2149. Rearrange Array Elements by Sign", "2149. Rearrange Array Elements by Sign\2149. Rearrange Array Elements by Sign.csproj", "{CA58D6E9-E66E-4A28-91F1-7787655B1493}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2965. Find Missing and Repeated Values", "2965. Find Missing and Repeated Values\2965. Find Missing and Repeated Values.csproj", "{B5F296A0-0255-4742-86C9-63567352CA66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -222,5 +224,9 @@ Global
 		{CA58D6E9-E66E-4A28-91F1-7787655B1493}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA58D6E9-E66E-4A28-91F1-7787655B1493}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA58D6E9-E66E-4A28-91F1-7787655B1493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5F296A0-0255-4742-86C9-63567352CA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5F296A0-0255-4742-86C9-63567352CA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5F296A0-0255-4742-86C9-63567352CA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5F296A0-0255-4742-86C9-63567352CA66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
