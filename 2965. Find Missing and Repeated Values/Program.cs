@@ -25,6 +25,9 @@
  *   For all x that 1 <= x <= n * n except two of them there is exatly one pair of i, j that 0 <= i, j <= n - 1 and grid[i][j] == x.
  */
 
+var s = new Solution();
+int[][] grid = [[9, 1, 7], [8, 9, 2], [3, 4, 6]];
+Console.WriteLine(s.FindMissingAndRepeatedValues(grid)); // [9, 5]
 Console.WriteLine("Hello, World!");
 
 public class Solution
@@ -32,19 +35,23 @@ public class Solution
     public int[] FindMissingAndRepeatedValues(int[][] grid)
     {
         var n = grid.Length;
-        int[] ans = [0, 0];
-        var map = Enumerable.Range(1, n * n).ToHashSet();
+        var m = n * n;
+        var expectedSum = (long)m * (m + 1) / 2;
+        var expectedSum2 = (long)m * (m + 1) * (2 * m + 1) / 6;
+        var actualSum = 0L;
+        var actualSum2 = 0L;
         
         for (var i = 0; i < n; i++) {
             for (var j = 0; j < n; j++) {
                 var num = grid[i][j];
-                if (!map.Remove(num)) {
-                    ans[0] = num;
-                }
+                actualSum += num;
+                actualSum2 += num * num;
             }
         }
-        
-        ans[1] = map.First();
-        return ans;
+
+        var aMinB = actualSum - expectedSum;
+        var a2MinB2 = actualSum2 - expectedSum2;
+        var aPlusB = a2MinB2 / aMinB;
+        return [(int)(aMinB + aPlusB) / 2, (int)(aPlusB - aMinB) / 2];
     }
 }
