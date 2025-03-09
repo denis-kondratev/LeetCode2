@@ -74,6 +74,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2149. Rearrange Array Eleme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2965. Find Missing and Repeated Values", "2965. Find Missing and Repeated Values\2965. Find Missing and Repeated Values.csproj", "{B5F296A0-0255-4742-86C9-63567352CA66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3208. Alternating Groups II", "3208. Alternating Groups II\3208. Alternating Groups II.csproj", "{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -228,5 +230,9 @@ Global
 		{B5F296A0-0255-4742-86C9-63567352CA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5F296A0-0255-4742-86C9-63567352CA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5F296A0-0255-4742-86C9-63567352CA66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
