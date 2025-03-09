@@ -19,12 +19,54 @@
  *   3 <= k <= colors.length
  */
 
+var s = new Solution();
+s.NumberOfAlternatingGroups([0, 1, 0, 1, 0], 3); // 2
 Console.WriteLine("Hello, World!");
 
 public class Solution
 {
     public int NumberOfAlternatingGroups(int[] colors, int k)
     {
-        return 0;
+        var n = colors.Length;
+
+        if (n < k)
+        {
+            return 0;
+        }
+
+        var beginning = 0;
+        var end = 0;
+        var length = 0;
+        var result = 0;
+        k--;
+
+        while (beginning < n)
+        {
+            var prevEnd = end;
+            end = (end + 1) % n;
+
+            if (colors[prevEnd] != colors[end])
+            {
+                length++;
+
+                if (length >= k)
+                {
+                    result++;
+                    beginning++;
+                }
+            }
+            else
+            {
+                length = 0;
+                if (end < beginning)
+                {
+                    break;
+                }
+
+                beginning = end;
+            }
+        }
+
+        return result;
     }
 }
