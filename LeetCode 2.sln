@@ -76,6 +76,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2965. Find Missing and Repe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3208. Alternating Groups II", "3208. Alternating Groups II\3208. Alternating Groups II.csproj", "{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3306. Count of Substrings Containing Every Vowel and K Consonants II", "3306. Count of Substrings Containing Every Vowel and K Consonants II\3306. Count of Substrings Containing Every Vowel and K Consonants II.csproj", "{9AAEF57C-632C-49DD-A462-0490F4EBF396}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -234,5 +236,9 @@ Global
 		{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C732A0DE-1C84-4FD3-A373-2A7A5F4220B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AAEF57C-632C-49DD-A462-0490F4EBF396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AAEF57C-632C-49DD-A462-0490F4EBF396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AAEF57C-632C-49DD-A462-0490F4EBF396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AAEF57C-632C-49DD-A462-0490F4EBF396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
