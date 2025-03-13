@@ -31,12 +31,78 @@
  *   0 <= k <= word.length - 5
  */
 
+var solution = new Solution();
+Console.WriteLine(solution.CountOfSubstrings("aoaiuefi", 1));
 Console.WriteLine("Hello, World!");
 
 public class Solution
 {
+    private const string Vowels = "aeiou";
+    
     public long CountOfSubstrings(string word, int k)
     {
-        return 0;
+        Span<int> counters = stackalloc int[6];
+        var result = 0;
+        int left = 0, right = 0;
+
+        while (right < word.Length)
+        {
+            counters[GetVowelIndex(word[right])]++;
+
+            if (counters[0] > k)
+            {
+                do
+                {
+                    counters[GetVowelIndex(word[left])]--;
+                    left++;
+
+                    if (HasVowels(counters))
+                    {
+                        result++;
+                    }
+                } while (counters[0] > k);
+            }
+            else if (counters[0] == k && HasVowels(counters))
+            {
+                result++;
+            }
+            
+            right++;
+        }
+        
+        while (left < word.Length)
+        {
+            counters[GetVowelIndex(word[left])]--;
+            
+            if (counters[0] == k && HasVowels(counters))
+            {
+                result++;
+                left++;
+            }
+            else
+            {
+                break;
+            }
+        }
+        
+        return result;
+    }
+    
+    private int GetVowelIndex(char c)
+    {
+        return c switch
+        {
+            'a' => 1,
+            'e' => 2,
+            'i' => 3,
+            'o' => 4,
+            'u' => 5,
+            _ => 0
+        };
+    }
+    
+    private bool HasVowels(in Span<int> counters)
+    {
+        return counters[1] > 0 && counters[2] > 0 && counters[3] > 0 && counters[4] > 0 && counters[5] > 0;
     }
 }
