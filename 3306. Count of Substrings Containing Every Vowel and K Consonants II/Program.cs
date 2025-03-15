@@ -37,72 +37,63 @@ Console.WriteLine("Hello, World!");
 
 public class Solution
 {
-    private const string Vowels = "aeiou";
-    
     public long CountOfSubstrings(string word, int k)
     {
-        Span<int> counters = stackalloc int[6];
-        var result = 0;
-        int left = 0, right = 0;
-
-        while (right < word.Length)
+        var frequencies = new int[2, 128];
+        foreach (var vowel in "aeiou")
         {
-            counters[GetVowelIndex(word[right])]++;
-
-            if (counters[0] > k)
-            {
-                do
-                {
-                    counters[GetVowelIndex(word[left])]--;
-                    left++;
-
-                    if (HasVowels(counters))
-                    {
-                        result++;
-                    }
-                } while (counters[0] > k);
-            }
-            else if (counters[0] == k && HasVowels(counters))
-            {
-                result++;
-            }
-            
-            right++;
+            frequencies[0, vowel] = 1;
         }
-        
-        while (left < word.Length)
+
+        long response = 0;
+        int currentK = 0, vowels = 0, extraLeft = 0;
+
+        for (int right = 0, left = 0; right < word.Length; right++)
         {
-            counters[GetVowelIndex(word[left])]--;
-            
-            if (counters[0] == k && HasVowels(counters))
+            char rightChar = word[right];
+
+            if (frequencies[0, rightChar] == 1)
             {
-                result++;
-                left++;
+                if (++frequencies[1, rightChar] == 1) vowels++;
             }
             else
             {
-                break;
+                currentK++;
+            }
+
+            while (currentK > k)
+            {
+                char leftChar = word[left];
+                if (frequencies[0, leftChar] == 1)
+                {
+                    if (--frequencies[1, leftChar] == 0) vowels--;
+                }
+                else
+                {
+                    currentK--;
+                }
+
+                left++;
+                extraLeft = 0;
+            }
+
+            while (vowels == 5 
+                   && currentK == k 
+                   && left < right 
+                   && frequencies[0, word[left]] == 1 
+                   && frequencies[1, word[left]] > 1)
+            {
+                extraLeft++;
+                frequencies[1, word[left]]--;
+                left++;
+            }
+
+            if (currentK == k && vowels == 5)
+            {
+                response += (1 + extraLeft);
             }
         }
-        
-        return result;
-    }
-    
-    private int GetVowelIndex(char c)
-    {
-        return c switch
-        {
-            'a' => 1,
-            'e' => 2,
-            'i' => 3,
-            'o' => 4,
-            'u' => 5,
-            _ => 0
-        };
-    }
-    
-    private bool HasVowels(in Span<int> counters)
-    {
-        return counters[1] > 0 && counters[2] > 0 && counters[3] > 0 && counters[4] > 0 && counters[5] > 0;
+
+        return response;
     }
 }
