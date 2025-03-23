@@ -44,8 +44,55 @@ Console.WriteLine("Hello, World!");
 
 public class Solution
 {
+    private const int Mod = 1_000_000_007;
+    
     public int CountPaths(int n, int[][] roads)
     {
-        return 0;
+        var graph = new List<(int, int)>[n];
+        for (var i = 0; i < n; i++) graph[i] = [];
+
+        foreach (var road in roads)
+        {
+            int u = road[0], v = road[1], time = road[2];
+            graph[u].Add((v, time));
+            graph[v].Add((u, time));
+        }
+
+        var dist = new long[n];
+        var ways = new int[n];
+        Array.Fill(dist, long.MaxValue);
+        Array.Fill(ways, 0);
+
+        dist[0] = 0;
+        ways[0] = 1;
+        
+
+        PriorityQueue<(long d, int v), (long d, int v)> pq = new();
+        pq.Enqueue((0, 0), (0, 0));
+
+        while (pq.Count > 0)
+        {
+            var (d, node) = pq.Dequeue();
+            if (d > dist[node])
+            {
+                continue;
+            }
+
+            foreach (var (neighbor, time) in graph[node])
+            {
+                if (dist[node] + time < dist[neighbor])
+                {
+                    dist[neighbor] = dist[node] + time;
+                    ways[neighbor] = ways[node];
+                    pq.Enqueue((dist[neighbor], neighbor), (dist[neighbor], neighbor));
+                }
+                else if (dist[node] + time == dist[neighbor])
+                {
+                    ways[neighbor] = (ways[neighbor] + ways[node]) % Mod;
+                }
+            }
+        }
+
+        return ways[n - 1];
     }
 }
