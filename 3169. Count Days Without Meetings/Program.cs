@@ -32,12 +32,33 @@
  *   1 <= meetings[i][0] <= meetings[i][1] <= days
  */
 
-Console.WriteLine("Hello, World!");
+var s = new Solution();
+Console.WriteLine(s.CountDays(5, [[2,4],[1,3]]));
 
 public class Solution
 {
     public int CountDays(int days, int[][] meetings)
     {
-        return 0;
+        Array.Sort(meetings, (a, b) => a[0] - b[0]);
+        int right = 1, count = 0;
+
+        foreach (var meeting in meetings)
+        {
+            var (start, end) = (meeting[0], meeting[1]);
+            
+            if (right < start)
+            {
+                count += start - right;
+            }
+
+            right = Math.Max(right, end + 1);
+        }
+        
+        if (right <= days)
+        {
+            count += days - right + 1;
+        }
+        
+        return count;
     }
 }
