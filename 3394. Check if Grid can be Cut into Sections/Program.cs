@@ -42,12 +42,46 @@
  *   - No two rectangles overlap.
  */
 
-Console.WriteLine("Hello, World!");
+var s = new Solution();
+Console.WriteLine(s.CheckValidCuts(5, [[1,0,5,2],[0,2,2,4],[3,2,5,3],[0,4,4,5]]));
 
 public class Solution
 {
     public bool CheckValidCuts(int n, int[][] rectangles)
     {
+        Array.Sort(rectangles, (a, b) => a[0] - b[0]);
+
+        if (HasCuts(rectangles, 0, 2))
+        {
+            return true;
+        }
+        
+        Array.Sort(rectangles, (a, b) => a[1] - b[1]);
+        return HasCuts(rectangles, 1, 3);
+    }
+
+    bool HasCuts(int[][] rectangles, int a, int b)
+    {
+        var position = 0;
+        var count = 0;
+        
+        foreach (var rectangle in rectangles)
+        {
+            var (start, end) = (rectangle[a], rectangle[b]);
+            
+            if (start >= position)
+            {
+                count++;
+
+                if (count > 2)
+                {
+                    return true;
+                }
+            }
+
+            position = Math.Max(position, end);
+        }
+        
         return false;
     }
 }
