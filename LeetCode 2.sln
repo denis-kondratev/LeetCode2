@@ -84,6 +84,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3169. Count Days Without Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3394. Check if Grid can be Cut into Sections", "3394. Check if Grid can be Cut into Sections\3394. Check if Grid can be Cut into Sections.csproj", "{1570F64F-226E-4575-A75C-423EA66C251A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2033. Minimum Operations to Make a Uni-Value Grid", "2033. Minimum Operations to Make a Uni-Value Grid\2033. Minimum Operations to Make a Uni-Value Grid.csproj", "{A4F9A4FA-A02B-4284-9A87-C732087C511F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -258,5 +260,9 @@ Global
 		{1570F64F-226E-4575-A75C-423EA66C251A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1570F64F-226E-4575-A75C-423EA66C251A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1570F64F-226E-4575-A75C-423EA66C251A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F9A4FA-A02B-4284-9A87-C732087C511F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F9A4FA-A02B-4284-9A87-C732087C511F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F9A4FA-A02B-4284-9A87-C732087C511F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F9A4FA-A02B-4284-9A87-C732087C511F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
