@@ -36,12 +36,40 @@
  *   1 <= x, grid[i][j] <= 10^4
  */
 
-Console.WriteLine("Hello, World!");
+var s = new Solution();
+Console.WriteLine(s.MinOperations([[1, 5], [2, 3]], 1));
 
 public class Solution
 {
     public int MinOperations(int[][] grid, int x)
     {
-        return 0;
+        int m = grid.Length, n = grid[0].Length;
+        Span<int> vec = stackalloc int[m * n];
+        var k = 0;
+        var first = grid[0][0];
+
+        foreach (var row in grid)
+        {
+            foreach (var value in row)
+            {
+                if ((value - first) % x != 0)
+                {
+                    return -1;
+                }
+
+                vec[k++] = value;
+            }
+        }
+
+        vec.Sort();
+        var median = vec[vec.Length / 2];
+        var counter = 0;
+
+        foreach (var val in vec)
+        {
+            counter += (val > median ? val - median : median - val) / x;
+        }
+
+        return counter;
     }
 }
