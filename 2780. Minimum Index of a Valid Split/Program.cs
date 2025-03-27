@@ -53,44 +53,47 @@ public class Solution
 {
     public int MinimumIndex(IList<int> nums)
     {
-        var n = nums.Count;
-
-        var mostFrequentNumber = FindMostFrequentNumber(nums);
-
-        var totalCountOfMostFrequentNumber = 0;
-        for (var i = 0; i < n; i++)
-            if (nums[i] == mostFrequentNumber)
-                totalCountOfMostFrequentNumber++;
-
-        var leftDoubled = 0;
-        var rightDoubled = totalCountOfMostFrequentNumber * 2;
-        var leftLength = 0;
-        var rightLength = n;
+        int n = nums.Count, dominant = FindDominant(nums), dominantCount = 0;
+        
         for (var i = 0; i < n; i++)
         {
-            leftLength++;
-            rightLength--;
-            if (nums[i] == mostFrequentNumber)
+            if (nums[i] == dominant)
             {
-                leftDoubled += 2;
-                rightDoubled -= 2;
+                dominantCount++;
+            }
+        }
+
+        int leftCount = 0, rightCount = dominantCount * 2, left = 1, right = n - 1;
+        
+        for (var i = 0; i < n; i++, left++, right--)
+        {
+            if (nums[i] == dominant)
+            {
+                leftCount += 2;
+                rightCount -= 2;
             }
 
-            if (leftDoubled > leftLength && rightDoubled > rightLength)
+            if (leftCount > left && rightCount > right)
+            {
                 return i;
+            }
         }
 
         return -1;
     }
 
-    private int FindMostFrequentNumber(IList<int> nums)
+    private int FindDominant(IList<int> nums)
     {
-        var res = 0;
-        var count = 1;
-        
-        for (var i = 1; i < nums.Count; i++)
+        int dominant = -1, count = 0;
+
+        foreach (var num in nums)
         {
-            if (nums[i] == nums[res])
+            if (count == 0)
+            {
+                dominant = num;
+                count = 1;
+            }
+            else if (num == dominant)
             {
                 count++;
             }
@@ -98,14 +101,8 @@ public class Solution
             {
                 count--;
             }
-
-            if (count == 0)
-            {
-                res = i;
-                count = 1;
-            }
         }
 
-        return nums[res];
+        return dominant;
     }
 }
