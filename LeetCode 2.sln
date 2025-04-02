@@ -88,6 +88,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2033. Minimum Operations to
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2780. Minimum Index of a Valid Split", "2780. Minimum Index of a Valid Split\2780. Minimum Index of a Valid Split.csproj", "{EC4CC35B-06CF-486C-BD31-F08DB8AA8E7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2873. Maximum Value of an Ordered Triplet I", "2873. Maximum Value of an Ordered Triplet I\2873. Maximum Value of an Ordered Triplet I.csproj", "{50D91B30-877B-40C7-A498-95B093D047C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -270,5 +272,9 @@ Global
 		{EC4CC35B-06CF-486C-BD31-F08DB8AA8E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC4CC35B-06CF-486C-BD31-F08DB8AA8E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC4CC35B-06CF-486C-BD31-F08DB8AA8E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D91B30-877B-40C7-A498-95B093D047C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D91B30-877B-40C7-A498-95B093D047C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D91B30-877B-40C7-A498-95B093D047C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D91B30-877B-40C7-A498-95B093D047C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
