@@ -38,6 +38,16 @@ public class Solution
 {
     public long MaximumTripletValue(int[] nums)
     {
-        return 0;
+        long max = 0;
+        int maxA = 0, maxAb = 0;
+
+        foreach (var num in nums)
+        {
+            max = Math.Max(max, maxAb * (long)num);
+            maxAb = Math.Max(maxAb, maxA - num);
+            maxA = Math.Max(maxA, num);
+        }
+
+        return max;
     }
 }
