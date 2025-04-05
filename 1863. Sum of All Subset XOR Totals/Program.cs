@@ -51,6 +51,14 @@ public class Solution
 {
     public int SubsetXORSum(int[] nums)
     {
-        return 0;
+        var result = 0;
+        
+        foreach (var num in nums)
+        {
+            result |= num;
+        }
+        
+        result <<= (nums.Length - 1);
+        return result;
     }
 }
