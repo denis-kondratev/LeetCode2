@@ -23,50 +23,51 @@
  *   All the integers in nums are unique.
  */
 
-int[] nums = [1, 2, 3];
 var solution = new Solution();
-Console.WriteLine(solution.LargestDivisibleSubset(nums));
+Console.WriteLine(solution.LargestDivisibleSubset([4,8,10,240]));
 
 public class Solution
 {
     public IList<int> LargestDivisibleSubset(int[] nums)
     {
         Array.Sort(nums);
-        var sets = new (int length, int previous)[nums.Length];
-        var maxLength = -1;
-        var index = -1;
-
-        for (var i = 0; i < nums.Length; i++)
+        var subsets = new List<int[]>(nums.Length);
+        
+        for (var i = nums.Length - 1; i >= 0; i--)
         {
-            var length = 0;
-            var previous = -1;
-
-            for (var j = 0; j < i; j++)
+            var num = nums[i];
+            int[]? max = null;
+            
+            foreach (var subset in subsets)
             {
-                if (sets[j].length > length && nums[i] % nums[j] == 0)
+                if (max is not null && max.Length >= subset.Length)
                 {
-                    length = sets[j].length;
-                    previous = j;
+                    continue;
+                }
+
+                if (subset[^1] % num == 0)
+                {
+                    max = subset;
                 }
             }
 
-            if (length >= maxLength)
-            {
-                maxLength = length;
-                index = i;
-            }
-            
-            sets[i] = (length + 1, previous);
+            subsets.Add(NewArray(num, max));
         }
 
-        var result = new List<int>(maxLength);
-        
-        while (index > 0)
+
+        return subsets.MaxBy(x => x.Length)!;
+    }
+
+    int[] NewArray(int value, int[]? other)
+    {
+        if (other is null)
         {
-            result.Add(nums[index]);
-            index = sets[index].previous;
+            return [value];
         }
-
+        
+        var result = new int[other.Length + 1];
+        Array.Copy(other, result, other.Length);
+        result[^1] = value;
         return result;
     }
 }
