@@ -31,43 +31,44 @@ public class Solution
     public IList<int> LargestDivisibleSubset(int[] nums)
     {
         Array.Sort(nums);
-        var subsets = new List<int[]>(nums.Length);
+        var dp = new (int value, int next, int length)[nums.Length];
+        var n = nums.Length;
+        int maxLength = 0, maxIndex = -1;
         
-        for (var i = nums.Length - 1; i >= 0; i--)
+        for (var i = n - 1; i >= 0; i--)
         {
             var num = nums[i];
-            int[]? max = null;
-            
-            foreach (var subset in subsets)
-            {
-                if (max is not null && max.Length >= subset.Length)
-                {
-                    continue;
-                }
+            (int currentIndex, int nextIndex, int length) cur = (num, -1, 1);
 
-                if (subset[^1] % num == 0)
+            for (var j = i + 1; j < n; j++)
+            {
+                var (value, next, length) = dp[j];
+                
+                if (length >= cur.length && value % num == 0)
                 {
-                    max = subset;
+                    cur = (num, j, length + 1);
                 }
             }
 
-            subsets.Add(NewArray(num, max));
+            dp[i] = cur;
+            
+            if (cur.length > maxLength)
+            {
+                maxLength = cur.length;
+                maxIndex = i;
+            }
         }
 
-
-        return subsets.MaxBy(x => x.Length)!;
-    }
-
-    int[] NewArray(int value, int[]? other)
-    {
-        if (other is null)
+        var result = new List<int>(maxLength);
+        var k = maxIndex;
+        
+        while (k != -1)
         {
-            return [value];
+            var (value, next, length) = dp[k];
+            result.Add(value);
+            k = next;
         }
         
-        var result = new int[other.Length + 1];
-        Array.Copy(other, result, other.Length);
-        result[^1] = value;
         return result;
     }
 }
