@@ -42,7 +42,7 @@ public class Solution
 
             for (var j = i + 1; j < n; j++)
             {
-                var (value, next, length) = dp[j];
+                var (value, _, length) = dp[j];
                 
                 if (length >= cur.length && value % num == 0)
                 {
@@ -64,7 +64,7 @@ public class Solution
         
         while (k != -1)
         {
-            var (value, next, length) = dp[k];
+            var (value, next, _) = dp[k];
             result.Add(value);
             k = next;
         }
