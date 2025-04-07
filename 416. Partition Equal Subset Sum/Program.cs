@@ -26,6 +26,35 @@ public class Solution
 {
     public bool CanPartition(int[] nums)
     {
+        var sum = nums.Sum();
+        if ((sum & 1) == 1)
+        {
+            return false;
+        }
+
+        var target = sum / 2;
+
+        return CanPartition(nums, target, 0);
+    }
+
+    private bool CanPartition(int[] nums, int target, int start)
+    {
+        switch (target)
+        {
+            case 0:
+                return true;
+            case < 0:
+                return false;
+        }
+
+        for (var i = start; i < nums.Length; i++)
+        {
+            if (CanPartition(nums, target - nums[i], i + 1))
+            {
+                return true;
+            }
+        }
+
         return false;
     }
 }
