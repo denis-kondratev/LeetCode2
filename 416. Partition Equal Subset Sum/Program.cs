@@ -20,7 +20,8 @@
  *   1 <= nums[i] <= 100
  */
 
-Console.WriteLine("Hello, World!");
+var s = new Solution();
+Console.WriteLine(s.CanPartition([1,5,11,5]));
 
 public class Solution
 {
@@ -33,23 +34,17 @@ public class Solution
         }
 
         var target = sum / 2;
+        var dp = new bool[target + 1];
+        dp[0] = true;
 
-        return CanPartition(nums, target, 0);
-    }
-
-    private bool CanPartition(int[] nums, int target, int start)
-    {
-        switch (target)
+        foreach (var num in nums)
         {
-            case 0:
-                return true;
-            case < 0:
-                return false;
-        }
+            for (var j = target; j >= num; j--)
+            {
+                dp[j] = dp[j] || dp[j - num];
+            }
 
-        for (var i = start; i < nums.Length; i++)
-        {
-            if (CanPartition(nums, target - nums[i], i + 1))
+            if (dp[target])
             {
                 return true;
             }
