@@ -41,6 +41,20 @@ public class Solution
 {
     public int MinimumOperations(int[] nums)
     {
+        Span<bool> seen = stackalloc bool[101];
+
+        for (var i = nums.Length - 1; i >= 0; i--)
+        {
+            var num = nums[i];
+            
+            if (seen[num])
+            {
+                return i / 3 + 1;
+            }
+            
+            seen[num] = true;
+        }
+        
         return 0;
     }
 }
