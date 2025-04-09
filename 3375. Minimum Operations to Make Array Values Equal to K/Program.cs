@@ -40,29 +40,21 @@ public class Solution
 {
     public int MinOperations(int[] nums, int k)
     {
-        Array.Sort(nums);
-        
-        if (nums[0] < k)
-        {
-            return -1;
-        }
-        
+        Span<bool> seen = stackalloc bool[101];
+        seen[k] = true;
         var counter = 0;
-        var previous = 0;
-        
-        for (var i = nums.Length - 1; i >= 0; i--)
+
+        foreach (var num in nums)
         {
-            var num = nums[i];
-            
-            if (num == k)
+            if (num < k)
             {
-                return counter;
+                return -1;
             }
-            
-            if (num != previous)
+
+            if (!seen[num])
             {
                 counter++;
-                previous = num;
+                seen[num] = true;
             }
         }
         
