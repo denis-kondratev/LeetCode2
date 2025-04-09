@@ -40,6 +40,32 @@ public class Solution
 {
     public int MinOperations(int[] nums, int k)
     {
-        return 0;
+        Array.Sort(nums);
+        
+        if (nums[0] < k)
+        {
+            return -1;
+        }
+        
+        var counter = 0;
+        var previous = 0;
+        
+        for (var i = nums.Length - 1; i >= 0; i--)
+        {
+            var num = nums[i];
+            
+            if (num == k)
+            {
+                return counter;
+            }
+            
+            if (num != previous)
+            {
+                counter++;
+                previous = num;
+            }
+        }
+        
+        return counter;
     }
 }
