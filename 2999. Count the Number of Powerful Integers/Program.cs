@@ -45,6 +45,44 @@ public class Solution
 {
     public long NumberOfPowerfulInt(long start, long finish, int limit, string s)
     {
-        return 0;
+        var a = (start - 1).ToString();
+        var b = finish.ToString();
+        return Calculate(b, s, limit) - Calculate(a, s, limit);
+    }
+
+    private static long Calculate(string x, string s, int limit)
+    {
+        if (x.Length < s.Length)
+        {
+            return 0;
+        }
+
+        if (x.Length == s.Length)
+        {
+            return string.CompareOrdinal(x, s) >= 0 ? 1 : 0;
+        }
+
+        var suffix = x[^s.Length..];
+        long count = 0;
+        var preLen = x.Length - s.Length;
+
+        for (var i = 0; i < preLen; i++)
+        {
+            var digit = x[i] - '0';
+            if (limit < digit)
+            {
+                count += (long)Math.Pow(limit + 1, preLen - i);
+                return count;
+            }
+
+            count += digit * (long)Math.Pow(limit + 1, preLen - 1 - i);
+        }
+
+        if (string.CompareOrdinal(suffix, s) >= 0)
+        {
+            count++;
+        }
+
+        return count;
     }
 }
