@@ -98,6 +98,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3396. Minimum Number of Ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3375. Minimum Operations to Make Array Values Equal to K", "3375. Minimum Operations to Make Array Values Equal to K\3375. Minimum Operations to Make Array Values Equal to K.csproj", "{1845590C-0A3C-45C9-A3C0-E26ED9E2AA17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2999. Count the Number of Powerful Integers", "2999. Count the Number of Powerful Integers\2999. Count the Number of Powerful Integers.csproj", "{B49972B7-0095-4927-9EC2-CB52B1AE9B19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -300,5 +302,9 @@ Global
 		{1845590C-0A3C-45C9-A3C0-E26ED9E2AA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1845590C-0A3C-45C9-A3C0-E26ED9E2AA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1845590C-0A3C-45C9-A3C0-E26ED9E2AA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49972B7-0095-4927-9EC2-CB52B1AE9B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49972B7-0095-4927-9EC2-CB52B1AE9B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49972B7-0095-4927-9EC2-CB52B1AE9B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49972B7-0095-4927-9EC2-CB52B1AE9B19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
