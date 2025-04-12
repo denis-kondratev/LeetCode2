@@ -29,6 +29,27 @@ public class Solution
 {
     public int CountSymmetricIntegers(int low, int high)
     {
-        return 0;
+        var count = 0;
+        var n = Math.Min(high + 1, 100);
+        
+        for (var i = low; i < n; ++i)
+        {
+            if (i % 11 == 0)
+            {
+                count++;
+            }
+        }
+        
+        n = Math.Max(low, 1000);
+        
+        for (var i = n; i <= high; ++i)
+        {
+            if (i / 1000 + i % 1000 / 100 == i % 100 / 10 + i % 10)
+            {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
