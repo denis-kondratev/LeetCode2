@@ -10,7 +10,7 @@
  * even index but is not even.
  *
  * Given an integer n, return the total number of good digit strings of length n. Since the answer
- * may be large, return it modulo 109 + 7.
+ * may be large, return it modulo 10^9 + 7.
  *
  * A digit string is a string consisting of digits 0 through 9 that may contain leading zeros.
  *
@@ -31,12 +31,33 @@
  *   1 <= n <= 10^15
  */
 
-Console.WriteLine("Hello, World!");
+var s = new Solution();
+Console.WriteLine(s.CountGoodNumbers(1));
 
 public class Solution
 {
+    private const int Mod = 1_000_000_007;
+    
     public int CountGoodNumbers(long n)
     {
-        return 0;
+        long oddCount = n / 2, evenCount = n - oddCount;
+        return (int)(ModPow(5, evenCount) * ModPow(4, oddCount) % Mod);
+    }
+    
+    private long ModPow(long value, long power)
+    {
+        long result = 1;
+        
+        while (power > 0)
+        {
+            if ((power & 1) == 1)
+            {
+                result = result * value % Mod;
+            }
+            value = value * value % Mod;
+            power >>= 1;
+        }
+        
+        return result;
     }
 }
