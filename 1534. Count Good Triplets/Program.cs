@@ -40,13 +40,20 @@ public class Solution
         
         for (var i = 0; i < arr.Length; i++)
         {
+            var numI = arr[i];
             for (var j = i + 1; j < arr.Length; j++)
             {
+                var numJ = arr[j];
+                
+                if (Math.Abs(numI - numJ) > a)
+                {
+                    continue;
+                }
+                
                 for (var k = j + 1; k < arr.Length; k++)
                 {
-                    if (Math.Abs(arr[i] - arr[j]) <= a 
-                        && Math.Abs(arr[j] - arr[k]) <= b 
-                        && Math.Abs(arr[i] - arr[k]) <= c)
+                    var numK = arr[k];
+                    if (Math.Abs(numJ - numK) <= b && Math.Abs(numI - numK) <= c)
                     {
                         count++;
                     }
