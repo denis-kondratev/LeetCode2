@@ -104,6 +104,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2843. Count Symmetric Integ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1922. Count Good Numbers", "1922. Count Good Numbers\1922. Count Good Numbers.csproj", "{68B2FC59-0437-4427-8AC1-C1D8F8365AE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1534. Count Good Triplets", "1534. Count Good Triplets\1534. Count Good Triplets.csproj", "{01062E1F-46C8-4B8D-B3E9-FF489810DD34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -318,5 +320,9 @@ Global
 		{68B2FC59-0437-4427-8AC1-C1D8F8365AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68B2FC59-0437-4427-8AC1-C1D8F8365AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68B2FC59-0437-4427-8AC1-C1D8F8365AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01062E1F-46C8-4B8D-B3E9-FF489810DD34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01062E1F-46C8-4B8D-B3E9-FF489810DD34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01062E1F-46C8-4B8D-B3E9-FF489810DD34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01062E1F-46C8-4B8D-B3E9-FF489810DD34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
