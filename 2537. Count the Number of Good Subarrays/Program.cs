@@ -27,12 +27,38 @@
  *   1 <= nums[i], k <= 10^9
  */
 
-Console.WriteLine("Hello, World!");
+var s = new Solution();
+Console.WriteLine(s.CountGood([3, 1, 4, 3, 2, 2, 4], 2));
 
 public class Solution
 {
     public long CountGood(int[] nums, int k)
     {
-        return 0;
+        int pairs = 0, right = -1, n = nums.Length;
+        var map = new Dictionary<int, int>();
+        long result = 0;
+
+        for (var left = 0; left < n; left++)
+        {
+            var leftNum = nums[left];
+            while (pairs < k && right + 1 < n)
+            {
+                var rightNum = nums[++right];
+                map.TryGetValue(rightNum, out var rightNumCount);
+                pairs += rightNumCount;
+                map[rightNum] = rightNumCount + 1;
+            }
+
+            if (pairs >= k)
+            {
+                result += n - right;
+            }
+
+            var leftNumCount = map[leftNum] - 1;
+            map[leftNum] = leftNumCount;
+            pairs -= leftNumCount;
+        }
+
+        return result;
     }
 }
