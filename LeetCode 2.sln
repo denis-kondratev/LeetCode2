@@ -108,6 +108,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1534. Count Good Triplets",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2537. Count the Number of Good Subarrays", "2537. Count the Number of Good Subarrays\2537. Count the Number of Good Subarrays.csproj", "{DE116902-00E9-4F76-B45A-8C2063E0617F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2563. Count the Number of Fair Pairs", "2563. Count the Number of Fair Pairs\2563. Count the Number of Fair Pairs.csproj", "{2D086E05-96BD-42BD-8D5B-468F1DCB4857}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -330,5 +332,9 @@ Global
 		{DE116902-00E9-4F76-B45A-8C2063E0617F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE116902-00E9-4F76-B45A-8C2063E0617F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE116902-00E9-4F76-B45A-8C2063E0617F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D086E05-96BD-42BD-8D5B-468F1DCB4857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D086E05-96BD-42BD-8D5B-468F1DCB4857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D086E05-96BD-42BD-8D5B-468F1DCB4857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D086E05-96BD-42BD-8D5B-468F1DCB4857}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
