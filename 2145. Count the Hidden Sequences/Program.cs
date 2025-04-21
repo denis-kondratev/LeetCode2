@@ -22,7 +22,7 @@
  *   Input: differences = [1,-3,4], lower = 1, upper = 6
  *   Output: 2
  *   Explanation: The possible hidden sequences are:
- *     - [3, 4, 1, 5]
+ *     - [3, 4, 1, 5] cur = d - prev;
  *     - [4, 5, 2, 6]
  *   Thus, we return 2.
  *
@@ -48,12 +48,26 @@
  *   -10^5 <= lower <= upper <= 10^5
  */
 
-Console.WriteLine("Hello, World!");
+var solution = new Solution();
+Console.WriteLine(solution.NumberOfArrays([1, -3, 4], 1, 6));
 
 public class Solution
 {
     public int NumberOfArrays(int[] differences, int lower, int upper)
     {
-        return 0;
+        int left = lower, right = upper;
+
+        foreach (var difference in differences)
+        {
+            left = Math.Max(lower, difference + left);
+            right = Math.Min(upper, difference + right);
+
+            if (right < left)
+            {
+                return 0;
+            }
+        }
+
+        return right - left + 1;
     }
 }
