@@ -112,6 +112,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2563. Count the Number of F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2145. Count the Hidden Sequences", "2145. Count the Hidden Sequences\2145. Count the Hidden Sequences.csproj", "{BD94C09C-5DD9-4C6E-8B44-E9C12CDDA05E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2962. Count Subarrays Where Max Element Appears at Least K Times", "2962. Count Subarrays Where Max Element Appears at Least K Times\2962. Count Subarrays Where Max Element Appears at Least K Times.csproj", "{C7E50632-FE70-4C10-91B3-0C5740F1992E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -342,5 +344,9 @@ Global
 		{BD94C09C-5DD9-4C6E-8B44-E9C12CDDA05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD94C09C-5DD9-4C6E-8B44-E9C12CDDA05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD94C09C-5DD9-4C6E-8B44-E9C12CDDA05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E50632-FE70-4C10-91B3-0C5740F1992E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E50632-FE70-4C10-91B3-0C5740F1992E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E50632-FE70-4C10-91B3-0C5740F1992E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E50632-FE70-4C10-91B3-0C5740F1992E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
