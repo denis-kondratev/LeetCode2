@@ -26,3 +26,11 @@
  */
 
 Console.WriteLine("Hello, World!");
+
+public class Solution
+{
+    public long CountSubarrays(int[] nums, int k)
+    {
+        return 0;
+    }
+}
