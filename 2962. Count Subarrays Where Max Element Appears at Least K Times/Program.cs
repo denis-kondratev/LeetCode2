@@ -25,12 +25,41 @@
  *   1 <= k <= 10^5
  */
 
-Console.WriteLine("Hello, World!");
+var solution = new Solution();
+Console.WriteLine(solution.CountSubarrays([1, 3, 2, 3, 3], 2));
 
 public class Solution
 {
     public long CountSubarrays(int[] nums, int k)
     {
-        return 0;
+        int n = nums.Length, max = 0, count = 0;
+        var result = 0L;
+
+        for (int l = 0, r = 0; r < n; r++)
+        {
+            if (nums[r] > max)
+            {
+                max = nums[r];
+                count = 1;
+                result = 0L;
+                l = 0;
+            }
+            else if (nums[r] == max)
+            {
+                count++;
+            }
+
+            while (count >= k)
+            {
+                if (nums[l++] == max)
+                {
+                    count--;
+                }
+                
+                result += n - r;
+            }
+        }
+
+        return result;
     }
 }
