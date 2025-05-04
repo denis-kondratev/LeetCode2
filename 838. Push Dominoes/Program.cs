@@ -37,7 +37,7 @@
  */
 
 var s = new Solution();
-Console.WriteLine(s.PushDominoes(".R..L."));
+Console.WriteLine(s.PushDominoes(".L.R...LR..L.."));
 
 public class Solution
 {
@@ -49,47 +49,59 @@ public class Solution
         {
             return dominoes;
         }
-        
-        char[] current = new char[n];
-        char[] result = dominoes.ToCharArray();
-        var hasChanged = true;
 
-        while (hasChanged)
+        Span<short> arr = stackalloc short[n];
+        arr[0] = dominoes[0] switch
         {
-            hasChanged = false;
-            (current, result) = (result, current);
+            'L' => -1,
+            'R' => 1,
+            _ => 0
+        };
 
-            result[0] = current[0] == '.' && current[1] == 'L' ? 'L' : current[0];
-            result[^1] = current[^1] == '.' && current[^2] == 'R' ? 'R' : current[^1];
-            
-            for (var i = 1; i < n - 1; i++)
+        for (var i = 1; i < n; i++)
+        {
+            arr[i] = dominoes[i] switch
             {
-                if (current[i] == '.')
-                {
-                    char l = current[i - 1], r = current[i + 1];
-                    
-                    if (l == 'R' && r != 'L')
-                    {
-                        result[i] = 'R';
-                        hasChanged = true;
-                    }
-                    else if (r == 'L' && l != 'R')
-                    {
-                        result[i] = 'L';
-                        hasChanged = true;
-                    }
-                    else
-                    {
-                        result[i] = '.';
-                    }
-                }
-                else
-                {
-                    result[i] = current[i];
-                }
-            }
+                'L' => -1,
+                'R' => 1,
+                _ when arr[i - 1] > 0 => (short)(arr[i - 1] + 1),
+                _ => 0
+            };
         }
         
-        return new string(result);
+        for (var i = n - 2; i >= 0; i--)
+        {
+            var cur = arr[i];
+            
+            if (cur is 1 or -1)
+            {
+                continue;
+            }
+            
+            var prev = arr[i + 1];
+
+            if (prev < 0)
+            {
+                arr[i] = (prev + cur) switch
+                {
+                    1 => 0,
+                    < 1 when cur is not 0 => cur,
+                    _ => (short)(prev - 1)
+                };
+            }
+        }
+
+        return string.Create(n, arr, (span, origin) =>
+        {
+            for (var i = 0; i < n; i++)
+            {
+                span[i] = origin[i] switch
+                {
+                    < 0 => 'L',
+                    > 0 => 'R',
+                    _ => '.'
+                };
+            }
+        });
     }
 }
