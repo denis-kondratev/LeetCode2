@@ -36,12 +36,60 @@
  *   dominoes[i] is either 'L', 'R', or '.'.
  */
 
-Console.WriteLine("Hello, World!");
+var s = new Solution();
+Console.WriteLine(s.PushDominoes(".R..L."));
 
 public class Solution
 {
     public string PushDominoes(string dominoes)
     {
-        return "";
+        var n = dominoes.Length;
+
+        if (n == 1)
+        {
+            return dominoes;
+        }
+        
+        char[] current = new char[n];
+        char[] result = dominoes.ToCharArray();
+        var hasChanged = true;
+
+        while (hasChanged)
+        {
+            hasChanged = false;
+            (current, result) = (result, current);
+
+            result[0] = current[0] == '.' && current[1] == 'L' ? 'L' : current[0];
+            result[^1] = current[^1] == '.' && current[^2] == 'R' ? 'R' : current[^1];
+            
+            for (var i = 1; i < n - 1; i++)
+            {
+                if (current[i] == '.')
+                {
+                    char l = current[i - 1], r = current[i + 1];
+                    
+                    if (l == 'R' && r != 'L')
+                    {
+                        result[i] = 'R';
+                        hasChanged = true;
+                    }
+                    else if (r == 'L' && l != 'R')
+                    {
+                        result[i] = 'L';
+                        hasChanged = true;
+                    }
+                    else
+                    {
+                        result[i] = '.';
+                    }
+                }
+                else
+                {
+                    result[i] = current[i];
+                }
+            }
+        }
+        
+        return new string(result);
     }
 }
