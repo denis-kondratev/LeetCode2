@@ -33,9 +33,9 @@ public class Solution
         const int mod = (int)1e9 + 7;
         long a = 1, b = 0, c = 0, d = 0;
 
-        for (var i = 1; i <= n; ++i)
+        for (var i = 0; i < n; i++)
         {
-            (a, b ,c, d) = (
+            (a, b, c, d) = (
                 (a + b + c + d) % mod,
                 (c + d) % mod,
                 (b + d) % mod,
